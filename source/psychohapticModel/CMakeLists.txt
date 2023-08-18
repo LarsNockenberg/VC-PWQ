@@ -1,0 +1,12 @@
+add_library(psychohapticModel include/PsychohapticModel.hpp src/PsychohapticModel.cpp include/PeakFiltering.hpp src/PeakFiltering.cpp)
+target_include_directories(psychohapticModel PUBLIC PkgConfig::FFTW)
+target_link_libraries(psychohapticModel PkgConfig::FFTW utilities)
+
+if(BUILD_CATCH2)
+    add_executable(test_peakFiltering test/PeakFiltering.test.cpp)
+    target_link_libraries(test_peakFiltering PRIVATE Catch2::Catch2WithMain psychohapticModel)
+    catch_discover_tests(test_peakFiltering)
+    add_executable(test_psychohapticModel test/PsychohapticModel.test.cpp)
+    target_link_libraries(test_psychohapticModel PRIVATE Catch2::Catch2WithMain psychohapticModel)
+    catch_discover_tests(test_psychohapticModel)
+endif()

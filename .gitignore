@@ -1,0 +1,77 @@
+#Data
+data_original
+data_encoded
+data_decoded
+data_compressed
+output
+
+#Custom
+_deps
+
+
+# Build folder
+cmake-build-debug
+build
+html
+latex
+
+#CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+test_*.cmake
+DartConfiguration.tcl
+catch_user_config.hpp
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# IDE
+.idea/
+.vscode/
+
+#Mac-specific
+.DS_Store
+
+
+
+
+#python
+__pycache__
